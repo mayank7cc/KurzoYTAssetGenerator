@@ -1,3 +1,8 @@
+
+
+https://github.com/user-attachments/assets/0dbb2d59-9260-4b4d-b8bb-46f16ac67f43
+
+
 Kurzo YouTube Tools:
 Kurzo YouTube Tools is a SaaS-style web application built using Java Spring Boot and integrated with the YouTube Data API. 
 The project is designed to help YouTube content creators optimize their workflow by generating SEO-optimized tags, retrieving complete video metadata, 
