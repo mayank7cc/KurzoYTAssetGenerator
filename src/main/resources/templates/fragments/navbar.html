@@ -1,0 +1,90 @@
+<nav xmlns:th="http://www.thymeleaf.org"
+     th:fragment="navbar"
+     class="w-full px-6 pt-6">
+
+    <div class="max-w-7xl mx-auto
+              backdrop-blur-xl
+              bg-[#0f1117]/80
+              border border-[#1f2430]
+              rounded-2xl
+              shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
+
+        <div class="flex items-center justify-between px-8 py-5">
+
+            <!-- Brand -->
+            <a href="/" class="flex flex-col leading-tight">
+        <span class="text-lg font-extrabold tracking-wide text-white">
+          Kurzo
+        </span>
+                <span class="text-xs font-semibold tracking-[0.25em] uppercase
+               text-[#ff0033] drop-shadow-[0_0_6px_rgba(255,0,51,0.6)]">
+              YouTube Tools
+              </span>
+
+            </a>
+
+            <!-- Navigation -->
+            <div class="flex items-center gap-8 text-sm font-medium">
+
+                <a href="/"
+                   th:classappend="${activePage}=='home'
+             ? 'text-white'
+             : 'text-slate-400 hover:text-white'"
+                   class="transition">
+                    SEO Tags
+                </a>
+
+                <a href="/thumbnail"
+                   th:classappend="${activePage}=='thumbnails'
+             ? 'text-white'
+             : 'text-slate-400 hover:text-white'"
+                   class="transition">
+                    Thumbnails
+                </a>
+
+                <a href="/video-details"
+                   th:classappend="${activePage}=='video'
+             ? 'text-white'
+             : 'text-slate-400 hover:text-white'"
+                   class="transition">
+                    Video Data
+                </a>
+
+                <!-- Theme Toggle -->
+                <button id="themeToggle"
+                        class="w-9 h-9 rounded-full
+                       flex items-center justify-center
+                       bg-[#151923]
+                       border border-[#222836]
+                       hover:border-[#ff0033]
+                       transition">
+                    <i id="themeIcon" class="bi bi-moon-fill text-slate-300"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('themeToggle');
+        const icon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        toggleBtn.addEventListener('click', () => {
+          if (html.classList.contains('dark')) {
+            html.classList.remove('dark');
+            localStorage.setItem('theme','light');
+            icon.className = 'bi bi-sun-fill text-yellow-400';
+          } else {
+            html.classList.add('dark');
+            localStorage.setItem('theme','dark');
+            icon.className = 'bi bi-moon-fill text-slate-300';
+          }
+        });
+
+        if (localStorage.getItem('theme') !== 'light') {
+          html.classList.add('dark');
+        }
+    </script>
+
+</nav>
