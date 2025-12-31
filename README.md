@@ -1,7 +1,4 @@
-
-
 https://github.com/user-attachments/assets/0dbb2d59-9260-4b4d-b8bb-46f16ac67f43
-
 
 Kurzo YouTube Tools:
 Kurzo YouTube Tools is a SaaS-style web application built using Java Spring Boot and integrated with the YouTube Data API. 
@@ -32,48 +29,7 @@ Thumbnail URLs are dynamically constructed and served for download. The frontend
 
 Project Structure:
 
-YouTubeTools/
-├── .idea/
-├── .mvn/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── YouTubeTools/
-│   │   │           ├── Config/
-│   │   │           │   └── WebClientConfig.java
-│   │   │           │
-│   │   │           ├── Controller/
-│   │   │           │   ├── PageController.java
-│   │   │           │   ├── ThumbnailController.java
-│   │   │           │   ├── YouTubeTagsController.java
-│   │   │           │   └── YouTubeVideoController.java
-│   │   │           │
-│   │   │           ├── Model/
-│   │   │           │   ├── SearchVideo.java
-│   │   │           │   ├── Video.java
-│   │   │           │   └── VideoDetails.java
-│   │   │           │
-│   │   │           ├── Service/
-│   │   │           │   ├── ThumbnailService.java
-│   │   │           │   └── YoutubeService.java
-│   │   │           │
-│   │   │           └── YouTubeToolsApplication.java
-│   │   │
-│   │   └── resources/
-│   │       ├── static/
-│   │       ├── templates/
-│   │       │   ├── fragments/
-│   │       │   │   └── navbar.html
-│   │       │   ├── home.html
-│   │       │   ├── thumbnails.html
-│   │       │   └── video-details.html
-│   │       │
-│   │       └── application.properties
-│   │
-│   └── test/
-│
-└── pom.xml
+<img width="1024" height="1536" alt="Project Structure" src="https://github.com/user-attachments/assets/f65025bf-8728-41dc-935f-fb2095829cb2" />
 
 Open the application in a browser at:
 http://localhost:8080
